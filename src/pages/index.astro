@@ -5,9 +5,14 @@ import CardClientes from "../components/es/CardClientes.astro";
 import CardCategorias from "../components/es/CardCategorias.astro";
 import Footer from "../components/es/Footer.astro";
 import Navbar from "../components/es/Navbar.astro";
+import SlideNoticia from "../components/es/SlideNoticia.astro";
+
+
 ---
 
-<Layout title="Welcome to Astro.">
+
+
+<Layout title="FEDE">
 	<Navbar />
 	<main>
 		<Hero />
@@ -184,33 +189,10 @@ import Navbar from "../components/es/Navbar.astro";
 			Últimas noticias
 		</h3>
 		<section class="px-5 md:px-20 mb-20 grid grid-cols-4 grid-rows-4 gap-5">
-			<div
-				class="bg-[url('/images/bento1.webp')] col-span-4 lg:col-span-2 row-span-4 bg-cover rounded-lg auto min-h-[500px] relative overflow-hidden hover:scale-[1.02] cursor-pointer transition-transform"
-			>
-				<div
-					class="absolute rounded-lg w-full h-full z-10 bg-gradient-to-b from-black to-transparent p-10"
-				>
-					<div class="flex flex-col h-full">
-						<h3
-							class="text-white text-3xl sm:text-4xl font-semibold"
-						>
-							Lorem ipsum dolor sit amet
-						</h3>
-						<p class="mt-5 text-white/85 text-md font-light">
-							Lorem ipsum dolor sit amet, consectetur adipisicing
-							elit. At reiciendis perspiciatis beatae sit? Itaque
-							doloremque perferendis neque, quis natus sapiente
-							repellat, at veritatis provident optio consequatur
-							nesciunt accusamus dicta delectus.
-						</p>
-						<p class="mt-5 text-white/85 text-md font-light">
-							Lorem ipsum dolor sit amet, consectetur adipisicing
-							elit. Nihil rerum autem ut, eos accusamus deleniti
-							harum ea corporis beatae possimus?
-						</p>
-					</div>
-				</div>
-			</div>
+
+			<SlideNoticia/>
+
+
 			<div
 				class="bg-[url('/images/bento1.webp')] col-span-4 sm:col-span-2 row-span-4 sm:row-span-2 bg-cover rounded-lg relative min-h-[250px] hover:scale-[1.02] cursor-pointer transition-transform"
 			>
@@ -263,7 +245,11 @@ import Navbar from "../components/es/Navbar.astro";
 			</div>
 		</section>
 		<Footer />
+		
 	</main>
+
+	<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+	
 </Layout>
 
 <style></style>
