@@ -1,0 +1,89 @@
+---
+import Navbar from "../components/es/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/es/Footer.astro";
+import Calendar from "../components/icons/Calendar.astro";
+import CardNoticia from "../components/es/CardNoticia.astro";
+---
+
+<Layout title="FEDE - Noticias de actualidad">
+    <Navbar />
+    <section class="bg-green-600 p-1 max-w-7xl mx-auto lg:rounded-xl">
+        <h1 class="text-center py-10 text-white text-4xl">Últimas noticias</h1>
+    </section>
+
+    <section class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-5 mt-10">
+        <img
+            src="/images/noticia1.jpg"
+            alt="Imagen"
+            class="overflow-hidden rounded-xl"
+        />
+        <div class="px-5">
+            <a href="" class="group">
+                <h2
+                    class="text-3xl md:text-4xl lg:text-5xl text-green-600 group-hover:underline"
+                >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Saepe, illum.
+                </h2>
+            </a>
+            <p class="mt-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                repudiandae ex alias in qui harum vel sunt sapiente eius libero
+                iusto illo blanditiis, voluptatibus recusandae reprehenderit
+                sint aliquam! Iusto asperiores atque odit molestiae quo
+                similique aliquam ipsum dolorum explicabo? Neque!
+            </p>
+            <div
+                class="flex flex-col-reverse lg:flex-row gap-y-5 justify-between mt-10"
+            >
+                <a
+                    href=""
+                    class="bg-green-600 text-white px-10 py-2 rounded-md hover:bg-green-700 transition-colors text-center lg:text-left"
+                    >Leer noticia</a
+                >
+                <div class="flex items-center gap-x-2">
+                    <Calendar class="size-6 my-auto" />
+                    <p class="text-green-500 font-semibold">17/04/2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="my-20 max-w-7xl mx-auto grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+    >
+        <CardNoticia
+            imgSrc="/images/noticia2.jpg"
+            title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,culpa?"
+            subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita, commodi ea architecto nobis laborum labore ex facere maiores mollitia ipsa veritatis quaerat vitae nostrum quisquam obcaecati, officiis consequatur provident."
+        />
+        <CardNoticia
+            imgSrc="/images/noticia3.jpg"
+            title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,culpa?"
+            subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita, commodi ea architecto nobis laborum labore ex facere maiores mollitia ipsa veritatis quaerat vitae nostrum quisquam obcaecati, officiis consequatur provident."
+        />
+        <CardNoticia
+            imgSrc="/images/economia-azul.webp"
+            title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,culpa?"
+            subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita, commodi ea architecto nobis laborum labore ex facere maiores mollitia ipsa veritatis quaerat vitae nostrum quisquam obcaecati, officiis consequatur provident."
+        />
+        <CardNoticia
+            imgSrc="/images/economia-turistica.webp"
+            title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,culpa?"
+            subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita, commodi ea architecto nobis laborum labore ex facere maiores mollitia ipsa veritatis quaerat vitae nostrum quisquam obcaecati, officiis consequatur provident."
+        />
+        <CardNoticia
+            imgSrc="/images/economia-verde.webp"
+            title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,culpa?"
+            subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita, commodi ea architecto nobis laborum labore ex facere maiores mollitia ipsa veritatis quaerat vitae nostrum quisquam obcaecati, officiis consequatur provident."
+        />
+        <CardNoticia
+            imgSrc="/images/economia-digital.webp"
+            title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,culpa?"
+            subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita, commodi ea architecto nobis laborum labore ex facere maiores mollitia ipsa veritatis quaerat vitae nostrum quisquam obcaecati, officiis consequatur provident."
+        />
+    </section>
+
+    <Footer />
+</Layout>
