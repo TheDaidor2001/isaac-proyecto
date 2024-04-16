@@ -4,15 +4,21 @@ interface Props {
   subtitle: string;
   classes: string;
   link: string;
+  imageLink: string;
 }
 
-const { classes, link, subtitle, title } = Astro.props;
+const { classes, link, subtitle, title, imageLink } = Astro.props;
 ---
 
 <div
-  class=" sm:w-full bg-white shadow-md border hover:shadow-lg hover:scale-[1.04] transition-transform rounded-xl"
+  class="sm:w-full bg-white shadow-md border hover:shadow-lg hover:scale-[1.04] transition-transform rounded-xl overflow-hidden"
 >
   <a href={link} class="relative">
+    <img
+      src={imageLink}
+      alt={`Imagen de la economia de ${title}`}
+      class="w-full h-52 object-cover"
+    />
     <div class="p-4 md:p-7">
       <h3
         class={`text-lg font-bold  inline-flex items-center uppercase ${classes}`}

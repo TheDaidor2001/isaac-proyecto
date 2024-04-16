@@ -6,43 +6,42 @@ import CardCategorias from "../components/es/CardCategorias.astro";
 import Footer from "../components/es/Footer.astro";
 import Navbar from "../components/es/Navbar.astro";
 import SlideNoticia from "../components/es/SlideNoticia.astro";
-
-
 ---
 
-
-
 <Layout title="FEDE">
-	
 	<main>
 		<Hero />
 		<section
 			id="tarjetas"
-			class="grid grid-cols-1 md:grid-cols-4 py-20 px-5 gap-5"
+			class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 py-20 px-5 md:px-20 gap-5"
 		>
 			<CardCategorias
 				title="ECONOMÍA VERDE"
 				subtitle="El Programa de la ONU para el Medio Ambiente (PNUMA) ha definido Economía Verde como “aquella economía que resulta en un mejor bienestar humano y equidad social.."
 				classes="text-green-500"
 				link=""
+				imageLink="/images/economia-verde.webp"
 			/>
 			<CardCategorias
 				title="ECONOMÍA AZUL"
 				subtitle=" La economía azul es «la economía que reconoce la importancia de los mares y los océanos como motores de la economía por su gran potencial para la innovación y el crecimiento»."
 				classes="text-slate-600"
 				link=""
+				imageLink="/images/economia-azul.webp"
 			/>
 			<CardCategorias
 				title="ECONOMÍA DIGITAL"
 				subtitle=" La economía digital, también conocida como ´Economía en Internet´ o ´Economía Web´, se refiere a una economía basada en la tecnología digital."
 				classes="text-red-600"
 				link=""
+				imageLink="/images/economia-digital.webp"
 			/>
 			<CardCategorias
 				title="ECONOMÍA TURÍSTICA"
 				subtitle=" El turismo es una actividad que permite el desarrollo nacional, especialmente sobre la redistribución de la renta, sobre la balanza de pagos, sobre el nivel de empleo, el Producto Interno Bruto y sobre las economías regionales."
 				classes="text-blue-600"
 				link=""
+				imageLink="/images/economia-turistica.webp"
 			/>
 		</section>
 
@@ -59,7 +58,15 @@ import SlideNoticia from "../components/es/SlideNoticia.astro";
 					En Guinea Ecuatorial
 				</h3>
 				<p class="text-gray-800 lg:text-md text-pretty">
-					Dicho Foro Económico para la Diversificación Económica será realizado próximamente en la República de Guinea Ecuatorial y contará con la participación de los socios al desarrollo, donde se presentará al tejido productivo nacional e internacional las oportunidades de inversión que ofrece la " Agenda Guinea Ecuatorial 2035' priorizando con mayor énfasis las cinco economías que son: a) economía Digital ;b) Economía verde; c)Economía Azul; Economía amarilla ; y Economía Turística
+					Dicho Foro Económico para la Diversificación Económica será
+					realizado próximamente en la República de Guinea Ecuatorial
+					y contará con la participación de los socios al desarrollo,
+					donde se presentará al tejido productivo nacional e
+					internacional las oportunidades de inversión que ofrece la "
+					Agenda Guinea Ecuatorial 2035' priorizando con mayor énfasis
+					las cinco economías que son: a) economía Digital ;b)
+					Economía verde; c)Economía Azul; Economía amarilla ; y
+					Economía Turística
 				</p>
 				<p class="text-gray-800 lg:text-md mt-5 text-pretty">
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -184,9 +191,7 @@ import SlideNoticia from "../components/es/SlideNoticia.astro";
 			Últimas noticias
 		</h3>
 		<section class="px-5 md:px-20 mb-20 grid grid-cols-4 grid-rows-4 gap-5">
-
-			<SlideNoticia/>
-
+			<SlideNoticia />
 		</section>
 		<section class="px-5 md:px-20 mb-20">
 			<h3
@@ -199,11 +204,12 @@ import SlideNoticia from "../components/es/SlideNoticia.astro";
 			</div>
 		</section>
 		<Footer />
-		
 	</main>
 
-	<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-	
+	<script
+		is:inline
+		src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"
+	></script>
 </Layout>
 
 <style></style>
