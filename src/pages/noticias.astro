@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import Footer from "../components/es/Footer.astro";
 import Calendar from "../components/icons/Calendar.astro";
 import CardNoticia from "../components/es/CardNoticia.astro";
+import CardNoticiaVideo from "../components/es/CardNoticiaVideo.astro";
 ---
 
 <Layout title="FEDE - Noticias de actualidad">
@@ -68,21 +69,27 @@ import CardNoticia from "../components/es/CardNoticia.astro";
             title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,culpa?"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita, commodi ea architecto nobis laborum labore ex facere maiores mollitia ipsa veritatis quaerat vitae nostrum quisquam obcaecati, officiis consequatur provident."
         />
-        <CardNoticia
-            imgSrc="/images/economia-turistica.webp"
-            title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,culpa?"
-            subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita, commodi ea architecto nobis laborum labore ex facere maiores mollitia ipsa veritatis quaerat vitae nostrum quisquam obcaecati, officiis consequatur provident."
-        />
-        <CardNoticia
-            imgSrc="/images/economia-verde.webp"
-            title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,culpa?"
-            subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita, commodi ea architecto nobis laborum labore ex facere maiores mollitia ipsa veritatis quaerat vitae nostrum quisquam obcaecati, officiis consequatur provident."
-        />
-        <CardNoticia
-            imgSrc="/images/economia-digital.webp"
-            title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,culpa?"
-            subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita, commodi ea architecto nobis laborum labore ex facere maiores mollitia ipsa veritatis quaerat vitae nostrum quisquam obcaecati, officiis consequatur provident."
-        />
+    </section>
+
+    <section class="my-20 max-w-7xl mx-auto">
+        <h2 class="text-4xl mb-10">Últimos Videos</h2>
+        <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <CardNoticiaVideo
+                videoSrc="/videos/video1.mp4"
+                title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,culpa?"
+                subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita, commodi ea architecto nobis laborum labore ex facere maiores mollitia ipsa veritatis quaerat vitae nostrum quisquam obcaecati, officiis consequatur provident."
+            />
+            <CardNoticiaVideo
+                videoSrc="/videos/video1.mp4"
+                title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,culpa?"
+                subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita, commodi ea architecto nobis laborum labore ex facere maiores mollitia ipsa veritatis quaerat vitae nostrum quisquam obcaecati, officiis consequatur provident."
+            />
+            <CardNoticiaVideo
+                videoSrc="/videos/video1.mp4"
+                title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,culpa?"
+                subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita, commodi ea architecto nobis laborum labore ex facere maiores mollitia ipsa veritatis quaerat vitae nostrum quisquam obcaecati, officiis consequatur provident."
+            />
+        </div>
     </section>
 
     <Footer />
