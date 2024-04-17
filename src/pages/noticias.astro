@@ -5,10 +5,6 @@ import Footer from "../components/es/Footer.astro";
 import Calendar from "../components/icons/Calendar.astro";
 import CardNoticia from "../components/es/CardNoticia.astro";
 import CardNoticiaVideo from "../components/es/CardNoticiaVideo.astro";
-
-import { db, Comment } from "astro:db";
-
-const comments = await db.select().from(Comment);
 ---
 
 <Layout title="FEDE - Noticias de actualidad">
@@ -60,40 +56,21 @@ const comments = await db.select().from(Comment);
     <section
         class="my-20 max-w-7xl mx-auto grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
     >
-        {comments.map((noticia: any) => <CardNoticia noticia={noticia} />)}
-        {
-            comments.map(({ title, body, img }) => (
-                <article class="">
-                    <img
-                        src={img}
-                        alt=""
-                        class="lg:rounded-xl object-cover w-full h-72"
-                    />
-                    <div class="px-5 lg:px-0">
-                        <a href="" class="group">
-                            <h2 class="text-green-700 text-3xl mt-5 text-pretty group-hover:underline">
-                                {title}
-                            </h2>
-                        </a>
-                        <p class="mt-2 text-md text-pretty">{body}</p>
-                    </div>
-                    <div class="flex flex-col-reverse gap-y-5 justify-between mt-5">
-                        <a
-                            href=""
-                            class="bg-green-600 text-white px-10 py-2 rounded-md hover:bg-green-700 text-center hover:scale-[1.03] transition-all"
-                        >
-                            Leer noticia
-                        </a>
-                        <div class="flex items-center gap-x-2">
-                            <Calendar class="size-6 my-auto" />
-                            <p class="text-green-500 font-semibold">
-                                17/04/2024
-                            </p>
-                        </div>
-                    </div>
-                </article>
-            ))
-        }
+        <CardNoticia
+            title="PNUD y la OIT lanzan un proyecto de apoyo a la economía verde"
+            subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad repudiandae ex alias in qui harum vel sunt sapiente eius libero iusto illo blanditiis, voluptatibus recusandae reprehenderit sint aliquam! Iusto asperiores atque odit molestiae quo similique aliquam ipsum dolorum explicabo? Neque!"
+            imageSrc="/images/noticia2.jpg"
+        />
+        <CardNoticia
+            title="Foro de Diversificación Económica de Guinea Ecuatorial"
+            subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad repudiandae ex alias in qui harum vel sunt sapiente eius libero iusto illo blanditiis, voluptatibus recusandae reprehenderit sint aliquam! Iusto asperiores atque odit molestiae quo similique aliquam ipsum dolorum explicabo? Neque!"
+            imageSrc="/images/noticia3.jpg"
+        />
+        <CardNoticia
+            title="Guinea Ecuatorial, una nueva mirada a la sostenibilidad"
+            subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad repudiandae ex alias in qui harum vel sunt sapiente eius libero iusto illo blanditiis, voluptatibus recusandae reprehenderit sint aliquam! Iusto asperiores atque odit molestiae quo similique aliquam ipsum dolorum explicabo? Neque!"
+            imageSrc="/images/economia-azul.webp"
+        />
     </section>
 
     <section class="my-20 max-w-7xl mx-auto">
