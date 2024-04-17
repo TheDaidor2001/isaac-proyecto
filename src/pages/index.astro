@@ -28,7 +28,7 @@ import PostNoticia from "../components/es/PostNoticia.astro";
 			<CardCategorias
 				title="ECONOMÍA AZUL"
 				subtitle=" La economía azul es «la economía que reconoce la importancia de los mares y los océanos como motores de la economía por su gran potencial para la innovación y el crecimiento»."
-				classes="text-slate-600"
+				classes="text-blue-600"
 				link=""
 				imageLink="/images/economia-azul.webp"
 			/>
@@ -42,56 +42,35 @@ import PostNoticia from "../components/es/PostNoticia.astro";
 			<CardCategorias
 				title="ECONOMÍA TURÍSTICA"
 				subtitle=" El turismo es una actividad que permite el desarrollo nacional, especialmente sobre la redistribución de la renta, sobre la balanza de pagos, sobre el nivel de empleo, el Producto Interno Bruto y sobre las economías regionales."
-				classes="text-blue-600"
+				classes="text-slate-600"
 				link=""
 				imageLink="/images/economia-turistica.webp"
 			/>
+			<CardCategorias
+				title="ECONOMÍA AMARILLA"
+				subtitle="  La economía amarilla pone el foco en la tecnificación de los procesos productivos mediante la ciencia y la tecnología y requiere vigilancia para evitar que genere desequilibrios sociales y desempleo."
+				classes="text-yellow-400"
+				link=""
+				imageLink="/images/economiamararila.webp"
+			/>
 		</section>
 
-		<section
-			class="px-0 md:px-20 mb-20 flex flex-col lg:flex-row gap-10 max-w-[1500px] mx-auto"
-		>
-			<img
-				src="/images/reunion.jpg"
-				alt="info"
-				class="w-full lg:w-1/2 object-cover md:rounded-lg"
-			/>
-			<div class="w-full lg:w-1/2 p-5">
-				<h3
-					class="font-semibold text-3xl lg:text-4xl mb-5 text-green-600"
-				>
-					En Guinea Ecuatorial
-				</h3>
-				<p class="text-gray-800 lg:text-md text-pretty">
-					Dicho Foro Económico para la Diversificación Económica será
-					realizado próximamente en la República de Guinea Ecuatorial
-					y contará con la participación de los socios al desarrollo,
-					donde se presentará al tejido productivo nacional e
-					internacional las oportunidades de inversión que ofrece la "
-					Agenda Guinea Ecuatorial 2035' priorizando con mayor énfasis
-					las cinco economías que son: a) economía Digital ;b)
-					Economía verde; c)Economía Azul; Economía amarilla ; y
-					Economía Turística
-				</p>
-				<p class="text-gray-800 lg:text-md mt-5 text-pretty">
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-					Quo architecto id sequi eveniet pariatur tempore illo
-					praesentium recusandae libero provident, at doloremque saepe
-					ut quae iusto exercitationem commodi. Incidunt perspiciatis
-					libero molestiae architecto quidem cupiditate veritatis
-					deleniti non in quisquam!
-				</p>
-				<p class="text-gray-800 lg:text-md mt-5 text-pretty">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-					Necessitatibus ullam laborum optio praesentium totam rerum
-					aliquam repellendus temporibus dolorem nam.
-				</p>
-			</div>
-		</section>
+		<h3
+		class="text-center text-4xl mt-10 uppercase mb-10 text-green-500 font-semibold"
+	>
+		Últimas noticias
+	</h3>
+	<section class="px-5 md:px-20 mb-20 gap-5 max-w-[1500px] mx-auto">
+		<a href="/noticias">
+			<SlideNoticia />
+		</a>
+	</section>
+
+
 
 		<section class="px-0 md:px-20 mb-36 max-w-[1500px] mx-auto">
 			<h3 class="text-center text-4xl mt-10 uppercase">
-				¿Por qúe elegirnos?
+				CONTACTANOS
 			</h3>
 			<div
 				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 w-full mt-14"
@@ -190,16 +169,7 @@ import PostNoticia from "../components/es/PostNoticia.astro";
 				</article>
 			</div>
 		</section>
-		<h3
-			class="text-center text-4xl mt-10 uppercase mb-10 text-green-500 font-semibold"
-		>
-			Últimas noticias
-		</h3>
-		<section class="px-5 md:px-20 mb-20 gap-5 max-w-[1500px] mx-auto">
-			<a href="/noticias">
-				<SlideNoticia />
-			</a>
-		</section>
+
 		<section class="px-5 md:px-20 mb-20 max-w-[1500px] mx-auto">
 			<h3
 				class="text-center text-4xl mt-10 uppercase text-green-500 font-semibold"
