@@ -2,24 +2,26 @@
 import Calendar from "../icons/Calendar.astro";
 
 interface Props {
-    noticia: any;
+    title: string;
+    subtitle: string;
+    imageSrc: string;
 }
 
-const { noticia } = Astro.props;
+const { subtitle, title, imageSrc } = Astro.props;
 ---
 
 <article class="h-full">
-    <img src="/images/noticia2.jpg" alt="" class="lg:rounded-xl object-cover" />
+    <img src={imageSrc} alt="" class="lg:rounded-xl object-cover min-h-72" />
     <div class="px-5 lg:px-0">
         <a href="" class="group">
             <h3
                 class="text-green-700 text-3xl mt-5 text-pretty group-hover:underline min-h-[110px]"
             >
-                {noticia.title}
+                {title}
             </h3>
         </a>
         <p class="mt-2 text-md text-pretty">
-            {noticia.subtitle}
+            {subtitle}
         </p>
         <div class="flex flex-col gap-y-5 justify-end mt-5">
             <div class="flex items-center gap-x-2">
