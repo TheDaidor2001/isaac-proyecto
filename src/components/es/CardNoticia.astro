@@ -2,37 +2,35 @@
 import Calendar from "../icons/Calendar.astro";
 
 interface Props {
-    imgSrc: string;
-    title: string;
-    subtitle: string;
+    noticia: any;
 }
 
-const { imgSrc, subtitle, title } = Astro.props;
+const { noticia } = Astro.props;
 ---
 
-<article class="">
-    <img src=/images/noticia2.jpg alt="" class="lg:rounded-xl object-cover w-full h-72" />
+<article class="h-full">
+    <img src="/images/noticia2.jpg" alt="" class="lg:rounded-xl object-cover" />
     <div class="px-5 lg:px-0">
         <a href="" class="group">
             <h3
-                class="text-green-700 text-3xl mt-5 text-pretty group-hover:underline"
+                class="text-green-700 text-3xl mt-5 text-pretty group-hover:underline min-h-[110px]"
             >
-                {title}
+                {noticia.title}
             </h3>
         </a>
         <p class="mt-2 text-md text-pretty">
-            {subtitle}
+            {noticia.subtitle}
         </p>
-        <div class="flex flex-col-reverse gap-y-5 justify-between mt-5">
+        <div class="flex flex-col gap-y-5 justify-end mt-5">
+            <div class="flex items-center gap-x-2">
+                <Calendar class="size-6 my-auto" />
+                <p class="text-green-500 font-semibold">17/04/2024</p>
+            </div>
             <a
                 href=""
                 class="bg-green-600 text-white px-10 py-2 rounded-md hover:bg-green-700 text-center hover:scale-[1.03] transition-all"
                 >Leer noticia</a
             >
-            <div class="flex items-center gap-x-2">
-                <Calendar class="size-6 my-auto" />
-                <p class="text-green-500 font-semibold">17/04/2024</p>
-            </div>
         </div>
     </div>
 </article>

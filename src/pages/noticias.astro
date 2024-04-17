@@ -6,7 +6,7 @@ import Calendar from "../components/icons/Calendar.astro";
 import CardNoticia from "../components/es/CardNoticia.astro";
 import CardNoticiaVideo from "../components/es/CardNoticiaVideo.astro";
 
-import { db, Comment } from 'astro:db';
+import { db, Comment } from "astro:db";
 
 const comments = await db.select().from(Comment);
 ---
@@ -40,10 +40,6 @@ const comments = await db.select().from(Comment);
                 sint aliquam! Iusto asperiores atque odit molestiae quo
                 similique aliquam ipsum dolorum explicabo? Neque!
             </p>
-        
-        
-        
-
 
             <div
                 class="flex flex-col-reverse lg:flex-row gap-y-5 justify-between mt-10"
@@ -64,32 +60,12 @@ const comments = await db.select().from(Comment);
     <section
         class="my-20 max-w-7xl mx-auto grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
     >
-
-        {
-         comments.map(({title, body, img})=>(
-            <article class="">
-            <img src={img} alt="" class="lg:rounded-xl object-cover w-full h-72" />
-            <div class="px-5 lg:px-0">
-               <a href="" class="group">
-                   <h2
-                     class="text-3xl md:text-4xl lg:text-5xl text-green-600 group-hover:underline"
-                        >            
-                        {title}
-                        </h2>
-                    </a>
-                    <p class="mt-5">
-                        {body}
-                    </p>
-                </div>
-          </article>
-                    ))
-        }
-
+        {comments.map((noticia: any) => <CardNoticia noticia={noticia} />)}
     </section>
 
     <section class="my-20 max-w-7xl mx-auto">
         <h2 class="text-4xl mb-10">Últimos Videos</h2>
-        <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="flex flex-warp gap-10">
             <CardNoticiaVideo
                 videoSrc="/videos/video1.mp4"
                 title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,culpa?"
